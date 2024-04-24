@@ -1,25 +1,14 @@
-import ReactDOM from 'react-dom/client'
+import ReactDOM from "react-dom/client";
 
-import App from './App'
+import Phonebook from "./Phonebook";
 
-const notes = [
-  {
-    id: 1,
-    content: 'HTML is easy',
-    important: true
-  },
-  {
-    id: 2,
-    content: 'Browser can execute only JavaScript',
-    important: false
-  },
-  {
-    id: 3,
-    content: 'GET and POST are the most important methods of HTTP protocol',
-    important: true
-  }
-]
+const persons = [
+  { name: "Arto Hellas", number: "040-123456", id: 1 },
+  { name: "Ada Lovelace", number: "39-44-5323523", id: 2 },
+  { name: "Dan Abramov", number: "12-43-234345", id: 3 },
+  { name: "Mary Poppendieck", number: "39-23-6423122", id: 4 },
+];
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <App notes={notes} />
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <Phonebook persons={persons} />,
+);
